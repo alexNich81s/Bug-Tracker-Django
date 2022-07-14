@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div>
+    <h1>Reported Bugs</h1>
+
+</div>
+<br>
+
+<div id="list">
+    <div>
+        {% for bugitem in bug_list %}
+            <h2>{{ bugitem.summaryTitle }}</h2>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
