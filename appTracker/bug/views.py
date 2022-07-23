@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, get_object_or_404
 from .models import Bug
 from .forms import CreateBugForm
 
@@ -24,3 +24,11 @@ def create_bug(request):
          'form' :form
     }
     return render(request, 'create_bug.html', context)
+
+def bug_detail(request, id):
+   
+    detail = get_object_or_404(Bug, pk=id)
+    context = {
+        'detail':  detail
+    }
+    return render(request, 'bug_detail.html', context)

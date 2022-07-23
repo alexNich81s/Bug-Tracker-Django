@@ -1,0 +1,31 @@
+body {
+    background-color: lightgrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.report-body{
+    border-color: blue;
+    background-color: aliceblue;
+    background-size: 20px auto;
+    margin-block: 20px;
+}
+
+
+#list{
+    background-color: white;
+    border-radius: 50px;
+    border-color: lightblue;
+}
+#home-header{
+    text-align: center;
+    text-size-adjust: auto;
+    font-size: larger;
+}
+sidebar li{
+    background-color: darkgrey;
+    color: white;
+}
+sidebar li a :hover{
+    background-color: white;
+    background-size: contain;
+}

@@ -1,16 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div>
+<div id="home-header">
     <h1>Reported Bugs</h1>
 
 </div>
 <br>
 
 <div id="list">
-    <div>
+    <div class="card-body">
         {% for bugitem in bug_list %}
+           <a href="{% url 'bug_detail' bugitem.id %}">
             <h2>{{ bugitem.summaryTitle }}</h2>
+            </a>
         {% endfor %}
     </div>
 </div>
