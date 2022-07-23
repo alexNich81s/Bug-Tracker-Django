@@ -8,7 +8,6 @@ class Bug(models.Model):
         ("text", "Text"),
         ("navigation", "Navigation")
     ]
-
     bugType = models.CharField(max_length = 12, choices=BUG_TYPES)
     assignedTo = models.CharField(max_length = 34)
    

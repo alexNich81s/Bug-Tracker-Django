@@ -1,13 +1,49 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title></title>
+        <title>My Django Bug Tracker</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <meta charset="utf-8">
+        <style>
+            body {
+                background-color: lightgrey;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+            
+            .report-body{
+                border-color: blue;
+                background-color: aliceblue;
+                background-size: 20px auto;
+                margin-block: 20px;
+            }
+            
+
+            #list{
+                background-color: white;
+                border-radius: 50px;
+                border-color: lightblue;
+            }
+            #home-header{
+                text-align: center;
+                text-size-adjust: auto;
+                font-size: larger;
+            }
+            sidebar li{
+                background-color: darkgrey;
+                color: white;
+            }
+            sidebar li a :hover{
+                background-color: white;
+                background-size: contain;
+            }
+        </style>
     </head>
     <body>
-        <h1>A Bug Tracker</h1>
+        <h1>My Django Bug Tracker</h1>
         <sidebar>
-            <li>Home</li>
-            <li>Add Bug</li>
+            <a href="{% url 'home_view' %}"><li>Home</li></a>
+            <a href="{% url 'create_bug' %}"><li>Add Bug</li></a>
             <li>About</li>
         </sidebar>
         {% block content %}
